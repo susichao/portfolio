@@ -1,12 +1,13 @@
 "use client";
 
 import {useEffect, useRef} from "react";
-import { Content, KeyTextField } from "@prismicio/client";
-import { SliceComponentProps } from "@prismicio/react";
+import { Content, KeyTextField, isFilled } from "@prismicio/client";
+import {  SliceComponentProps } from "@prismicio/react";
 import { Span } from "next/dist/trace";
 import { gsap } from  "gsap";
 import Bounded from "@/components/Bounded";
 import Shapes from "./Shapes";
+
 /**
  * Props for `Hero`.
  */
@@ -77,7 +78,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
       data-slice-variation={slice.variation}
       ref={component}
     >
-      <div className="grid min-h-[70vh] grid-cols-1 md:grid-cols-2 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center">
         <Shapes />
         <div className="col-start-1 md:row-strat-1">
           <h1 
@@ -88,7 +89,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
             <span className="-mt-[0.02em] block text-slate-600"> 
             {renderLetters(slice.primary.lastname,  'last')}</span>
           </h1>
-            <span className="job-title block bg-gradient-to-tr from-yellow-200 via-blue-500 to-yellow-200 bg-clip-text text-2xl front-bold uppercase tracking-[1.5em] text-transparent opacity-0 md:text-2xl">
+            <span className="job-title block bg-gradient-to-tr from-yellow-200 via-blue-500 to-yellow-200 bg-clip-text text-2xl front-bold uppercase tracking-[1.3em] text-transparent opacity-0 md:text-2xl">
               {slice.primary.tagline}</span>
         
         </div>

@@ -16,9 +16,14 @@
 			"tagline": {
 				"__TYPE__": "FieldContent",
 				"type": "Text",
-				"value": "software engineer "
+				"value": "software engineer"
 			}
 		},
-		"items": []
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
 	}
 ]
